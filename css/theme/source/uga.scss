@@ -1,0 +1,174 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+/* @import url(./fonts/league-gothic/league-gothic.css); */
+/* @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic); */
+
+// Include theme-specific fonts
+$systemFontsSansSerif: -apple-system,
+		       BlinkMacSystemFont,
+		       avenir next,
+		       avenir,
+		       segoe ui,
+		       helvetica neue,
+		       helvetica,
+		       Cantarell,
+		       Ubuntu,
+		       roboto,
+		       noto,
+		       arial,
+		       sans-serif;
+$systemFontsMono: Menlo,
+		  Consolas,
+		  Monaco,
+		  Liberation Mono,
+		  Lucida Console,
+		  monospace;
+
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+    color-profile: sRGB;
+    rendering-intent: auto;
+}
+
+/* $background: #282A36; */
+/* $foreground: #F8F8F2; */
+/* $selection: #44475A; */
+/* $comment: #6272A4; */
+/* $red: #FF5555; */
+/* $orange: #FFB86C; */
+/* $yellow: #F1FA8C; */
+/* $green: #50FA7B; */
+/* $purple: #BD93F9; */
+/* $cyan: #8BE9FD; */
+/* $pink: #FF79C6; */
+
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $base00;
+$headingColor: $base02;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: $base3;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $magenta;
+
+$inlineCodeColor: $base1;
+$listBulletColor: $cyan;
+
+$overlayElementBgColor: 0, 0, 0;
+$overlayElementFgColor: 240, 240, 240;
+
+// Background generator
+// @mixin bodyBackground() {
+// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+// }
+
+$mainFont: $systemFontsSansSerif;
+$codeFont: "Fira Code", $systemFontsMono;
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+:root {
+    --r-bold-color: #{$orange};
+    --r-italic-color: #{$yellow};
+    --r-inline-code-color: #{$inlineCodeColor};
+    --r-list-bullet-color: #{$listBulletColor};
+}
+
+.reveal {
+    p {
+        text-align: left;
+    }
+    strong, b {
+	color: var(--r-bold-color);
+    }
+    em, i, blockquote {
+	color: var(--r-italic-color);
+    }
+    code:not(.hljs) {
+	color: var(--r-inline-code-color);
+    }
+    // Dracula colored list bullets and numbers
+    ul, ol {
+	li::marker {
+	    //	color: var(--r-list-bullet-color);
+	}
+    }
+    pre code {
+        max-height:600px;
+    }
+    pre code.hljs {
+	display: block;
+	overflow-x: auto;
+	padding: 1em;
+    }
+    img {
+	display:block;
+	margin-inline:auto;
+    }
+    table {
+	display: inline-block;
+	font-size: 0.7em;
+	overflow: auto;
+	max-height: 750px;
+	margin:auto;
+	border: none;
+	
+    }
+    table:not(.hljs-ln) {
+	thead {
+	    background:$base2;
+	}
+	tr {
+	    border: 2px solid $base1;//var(--r-main-color);
+	}
+    }
+
+    #text-table-of-contents{
+        max-height:750px;
+        overflow:auto;
+    }
+    #text-table-of-contents ul{
+        display:flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+        font-size:20px;
+    }
+    span[class|=section-number] {
+        display: none;
+    }
+}
