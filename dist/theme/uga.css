@@ -391,6 +391,9 @@ html * {
 .reveal code:not(.hljs) {
   color: var(--r-inline-code-color);
 }
+.reveal ul ul, .reveal ol ul {
+  font-size: 32px;
+}
 .reveal pre code {
   max-height: 600px;
 }

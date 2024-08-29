@@ -127,6 +127,9 @@ $codeFont: "Fira Code", $systemFontsMono;
 	li::marker {
 	    //	color: var(--r-list-bullet-color);
 	}
+        ul {
+          font-size:32px;
+        }
     }
     pre code {
         max-height:600px;
