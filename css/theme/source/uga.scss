@@ -97,7 +97,8 @@ $overlayElementFgColor: 240, 240, 240;
 // }
 
 $mainFont: $systemFontsSansSerif;
-$codeFont: "Fira Code", $systemFontsMono;
+//$codeFont: "Fira Code", $systemFontsMono;
+$codeFont: $systemFontsMono;
 
 // Theme template ------------------------------
 @import "../template/theme";
@@ -118,6 +119,9 @@ $codeFont: "Fira Code", $systemFontsMono;
     }
     em, i, blockquote {
 	color: var(--r-italic-color);
+    }
+    .CodeMirror {
+        font-family: $codeFont
     }
     code:not(.hljs) {
 	color: var(--r-inline-code-color);

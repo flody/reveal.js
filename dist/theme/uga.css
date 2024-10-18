@@ -45,7 +45,7 @@ html * {
   --r-heading2-size: 2.11em;
   --r-heading3-size: 1.55em;
   --r-heading4-size: 1em;
-  --r-code-font: Fira Code, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --r-code-font: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
   --r-link-color: #268bd2;
   --r-link-color-dark: #1a6091;
   --r-link-color-hover: #78b9e6;
@@ -387,6 +387,9 @@ html * {
 }
 .reveal em, .reveal i, .reveal blockquote {
   color: var(--r-italic-color);
+}
+.reveal .CodeMirror {
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 .reveal code:not(.hljs) {
   color: var(--r-inline-code-color);
