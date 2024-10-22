@@ -379,6 +379,11 @@ html * {
   --r-list-bullet-color: #2aa198;
 }
 
+.reveal {
+  /* .cm-s-solarized.cm-s-light{ */
+  /*   background-color:$base2; */
+  /* } */
+}
 .reveal p {
   text-align: left;
 }
@@ -390,12 +395,26 @@ html * {
 }
 .reveal .CodeMirror {
   font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  border: none;
+}
+.reveal .code-wrapper {
+  box-shadow: none;
+  border: 3px solid #93a1a1;
+  box-shadow: 1px 1px 4px 0 #93a1a1;
+  max-height: 90vh;
+}
+.reveal .cm-s-solarized.CodeMirror {
+  box-shadow: none;
+  margin-bottom: 20px;
 }
 .reveal code:not(.hljs) {
   color: var(--r-inline-code-color);
 }
 .reveal ul ul, .reveal ol ul {
   font-size: 32px;
+}
+.reveal pre {
+  font-size: 0.3em;
 }
 .reveal pre code {
   max-height: 600px;
