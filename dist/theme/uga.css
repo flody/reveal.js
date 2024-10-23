@@ -29,7 +29,7 @@ html * {
 :root {
   --r-background-color: #fdf6e3;
   --r-main-font: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-  --r-main-font-size: 40px;
+  --r-main-font-size: 30px;
   --r-main-color: #657b83;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
@@ -41,8 +41,8 @@ html * {
   --r-heading-text-shadow: none;
   --r-heading-font-weight: normal;
   --r-heading1-text-shadow: none;
-  --r-heading1-size: 3.77em;
-  --r-heading2-size: 2.11em;
+  --r-heading1-size: 3.77rem;
+  --r-heading2-size: 3rem;
   --r-heading3-size: 1.55em;
   --r-heading4-size: 1em;
   --r-code-font: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
@@ -397,6 +397,9 @@ html * {
   font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
   border: none;
 }
+.reveal .CodeMirror pre {
+  font-size: 1.3rem;
+}
 .reveal .code-wrapper {
   box-shadow: none;
   border: 3px solid #93a1a1;
@@ -411,13 +414,23 @@ html * {
   color: var(--r-inline-code-color);
 }
 .reveal ul ul, .reveal ol ul {
-  font-size: 32px;
+  font-size: 0.8em;
 }
+.reveal section pre.code-wrapper .CodeMirror pre,
 .reveal pre {
-  font-size: 0.3em;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  padding: 0;
+}
+.reveal .CodeMirror-code .CodeMirror-linenumber {
+  padding: 0;
+}
+.reveal .CodeMirror-line {
+  margin-left: 5px;
 }
 .reveal pre code {
-  max-height: 600px;
+  max-height: unset;
+  /* max-height: 90vh; */
 }
 .reveal pre code.hljs {
   display: block;
@@ -430,7 +443,7 @@ html * {
 }
 .reveal table {
   display: inline-block;
-  font-size: 0.7em;
+  font-size: 1.3rem;
   overflow: auto;
   max-height: 750px;
   margin: auto;

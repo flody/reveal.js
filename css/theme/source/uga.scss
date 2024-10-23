@@ -91,6 +91,13 @@ $listBulletColor: $cyan;
 $overlayElementBgColor: 0, 0, 0;
 $overlayElementFgColor: 240, 240, 240;
 
+$headingLineHeight: 1.2;
+$heading1Size: 3.77rem;
+$heading2Size: 3rem;
+$heading3Size: 1.55em;
+$heading4Size: 1.00em;
+$mainFontSize: 30px;
+
 // Background generator
 // @mixin bodyBackground() {
 // 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
@@ -122,7 +129,10 @@ $codeFont: $systemFontsMono;
     }
     .CodeMirror {
       font-family: $codeFont;
-                   border:none;
+      border:none;
+      pre {
+        font-size: 1.3rem;
+      }
     }
     .codeblock {
     }
@@ -131,7 +141,6 @@ $codeFont: $systemFontsMono;
       border:3px solid $base1;
       
       box-shadow: 1px 1px 4px 0 $base1;
-      
       max-height: 90vh;
     }
     .cm-s-solarized.CodeMirror {
@@ -150,14 +159,24 @@ $codeFont: $systemFontsMono;
 	    //	color: var(--r-list-bullet-color);
 	}
         ul {
-          font-size:32px;
+          font-size:0.8em;
         }
     }
+    section pre.code-wrapper .CodeMirror pre,
     pre {
-      font-size: 0.3em;
+      font-size: 1.1rem;
+      line-height:1.3;
+      padding:0;
     }
-    pre code {
-        max-height:600px;
+    .CodeMirror-code .CodeMirror-linenumber{
+      padding:0;
+    }
+    .CodeMirror-line {
+      margin-left:5px;
+    }
+    pre code{
+      max-height:unset;
+      /* max-height: 90vh; */
     }
     pre code.hljs {
 	display: block;
@@ -170,7 +189,7 @@ $codeFont: $systemFontsMono;
     }
     table {
 	display: inline-block;
-	font-size: 0.7em;
+	font-size: 1.3rem;
 	overflow: auto;
 	max-height: 750px;
 	margin:auto;
