@@ -142,6 +142,7 @@ $codeFont: $systemFontsMono;
       
       box-shadow: 1px 1px 4px 0 $base1;
       max-height: 90vh;
+      overflow:auto;
     }
     .cm-s-solarized.CodeMirror {
       box-shadow:none;

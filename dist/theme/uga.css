@@ -405,6 +405,7 @@ html * {
   border: 3px solid #93a1a1;
   box-shadow: 1px 1px 4px 0 #93a1a1;
   max-height: 90vh;
+  overflow: auto;
 }
 .reveal .cm-s-solarized.CodeMirror {
   box-shadow: none;
