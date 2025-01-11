@@ -122,10 +122,11 @@ $codeFont: $systemFontsMono;
         height:100%;
     }
     .org-src-container {
-        height:90%;
+      height:100%;
+      max-height:95%
     }
     .column {
-        height:100%;
+        // height:100%;
     }
     p {
       text-align: left;
@@ -145,15 +146,17 @@ $codeFont: $systemFontsMono;
     }
     .codeblock {
         max-height:100%;
-        height:100%;
+        // height:100%;
+        overflow:auto;
+        border:3px solid $base1;
+        box-shadow: 1px 1px 4px 0 $base1
     }
-    .code-wrapper {
-      box-shadow:none;
-      border:3px solid $base1;
-      box-shadow: 1px 1px 4px 0 $base1;
+    .code-wrapper {;
       height:100%;
-      max-height: 90%;
-      overflow:auto;
+      max-height: 100%;
+      margin:0;
+      box-shadow:none;
+      // overflow:auto;
       display:block;
     }
     .cm-s-solarized.CodeMirror {
@@ -200,15 +203,14 @@ $codeFont: $systemFontsMono;
 	display:block;
 	margin-inline:auto;
     }
-    table {
-	display: inline-block;
-	font-size: 1.3rem;
-	overflow: auto;
-	max-height: 750px;
-	margin:auto;
-	border: none;
-	
-    }
+    // table {
+    //     display: inline-block;
+    //     font-size: 1.3rem;
+    //     overflow: auto;
+    //     max-height: 750px;
+    //     margin:auto;
+    //     border: none;	
+    // }
     table:not(.hljs-ln) {
 	thead {
 	    background:$base2;
