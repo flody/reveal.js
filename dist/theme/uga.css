@@ -398,7 +398,6 @@ html * {
   height: 100%;
 }
 .reveal .org-src-container {
-  height: 100%;
   max-height: 95%;
 }
 .reveal p {
