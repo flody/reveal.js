@@ -204,10 +204,20 @@ $codeFont: $systemFontsMono;
       max-height:unset;
       /* max-height: 90vh; */
     }
-    pre code.hljs {
+    pre code.hljs, pre.example {
 	display: block;
 	overflow-x: auto;
 	padding: 1em;
+    }
+   pre.example {
+      background-color: $base2;
+      border: 1px solid $base1;
+      border-radius: 5px;
+      box-shadow: 1px 1px 4px 0 $base1;
+      margin: 0;
+      padding: 1em;
+      box-sizing: border-box;
+      max-width:100%
     }
     img {
 	display:block;

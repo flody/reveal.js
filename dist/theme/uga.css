@@ -455,10 +455,20 @@ html * {
   max-height: unset;
   /* max-height: 90vh; */
 }
-.reveal pre code.hljs {
+.reveal pre code.hljs, .reveal pre.example {
   display: block;
   overflow-x: auto;
   padding: 1em;
+}
+.reveal pre.example {
+  background-color: #eee8d5;
+  border: 1px solid #93a1a1;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px 0 #93a1a1;
+  margin: 0;
+  padding: 1em;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 .reveal img {
   display: block;
