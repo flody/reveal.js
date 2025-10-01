@@ -121,7 +121,7 @@ $codeFont: $systemFontsMono;
     .figure {
         max-height:100%;
         height:100%;
-        // overflow:hidden;
+        //overflow:hidden;
         position:relative;
     }
     .figure p {
@@ -203,6 +203,7 @@ $codeFont: $systemFontsMono;
     pre code{
       max-height:unset;
       /* max-height: 90vh; */
+      max-height:600px;
     }
     pre code.hljs, pre.example {
 	display: block;
