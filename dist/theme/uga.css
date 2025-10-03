@@ -386,12 +386,10 @@ html * {
 }
 .reveal .figure {
   max-height: 100%;
-  height: 100%;
   position: relative;
 }
 .reveal .figure p {
   max-height: 100%;
-  height: 100%;
 }
 .reveal .slides section > section {
   height: 100%;
