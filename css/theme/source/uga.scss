@@ -181,6 +181,7 @@ $codeFont: $systemFontsMono;
     }
     // Dracula colored list bullets and numbers
     ul, ol {
+        display:block;
 	li::marker {
 	    //	color: var(--r-list-bullet-color);
 	}

@@ -433,6 +433,9 @@ html * {
 .reveal code:not(.hljs) {
   color: var(--r-inline-code-color);
 }
+.reveal ul, .reveal ol {
+  display: block;
+}
 .reveal ul ul, .reveal ol ul {
   font-size: 0.8em;
 }
