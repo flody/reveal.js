@@ -106,7 +106,9 @@ $mainFontSize: 30px;
 $mainFont: $systemFontsSansSerif;
 //$codeFont: "Fira Code", $systemFontsMono;
 $codeFont: $systemFontsMono;
-
+* {
+    box-sizing: border-box;
+}
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
